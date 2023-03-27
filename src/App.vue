@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1 class='fs-3 app-title'><strong>IPL 2022 Points Table</strong></h1>
+  <nav>
+    <router-link to="/">Standings</router-link> &nbsp;&nbsp;
+    <router-link to="/auctionPlayer">Playerwise Scores</router-link> &nbsp;&nbsp;&nbsp;
+    <router-link to="/auctionBay"><i class="bi bi-three-dots-vertical"></i></router-link>
+  </nav>
+  <router-view/>
+  <!-- <auction-player></auction-player> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import AuctionPlayer from './components/AuctionPlayer.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    // AuctionPlayer
+    },
+  
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<!-- <style>
+* {
+  box-sizing: border-box;
 }
-</style>
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style> -->
