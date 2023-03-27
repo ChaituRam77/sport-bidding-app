@@ -116,9 +116,9 @@ export default {
       console.log("Calliing");
       const options = {
         method: "GET",
-        url: "https://teatapp.onrender.com/getRandomPlayer",
+        // url: "https://teatapp.onrender.com/getRandomPlayer",
         // url: "http://localhost:8080/getRandomPlayer",
-        // url: "getRandomPlayer",
+        url: "getRandomPlayer",
         params: { basePrice: this.basePrice, category: this.category },
         headers: {
           // "Access-Control-Allow-Origin": "*",
