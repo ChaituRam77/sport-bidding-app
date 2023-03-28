@@ -47,7 +47,9 @@
         </div>
       </div>
 
-      <button class="btn btn-primary" @click.prevent="callAPI2">Call API</button>
+      <button class="btn btn-primary" @click.prevent="callAPI2">
+        Call API
+      </button>
     </div>
 
     <div v-if="playerData">
@@ -75,6 +77,12 @@ export default {
     },
     setCategory(category) {
       this.category = category;
+    },
+    callBackEnd() {
+      axios.get("https://teatapp.onrender.com/getRandomPlayer?basePrice=3&category=batsman").then((response) => {
+          this.apiScore = response.data;
+          console.log(this.apiScore);
+        });
     },
     callAPI() {
       const apiUrl = "http://localhost:8080/getRandomPlayer";
@@ -116,12 +124,12 @@ export default {
       console.log("Calliing");
       const options = {
         method: "GET",
-        // url: "https://teatapp.onrender.com/getRandomPlayer",
+        url: "https://teatapp.onrender.com/getRandomPlayer",
         // url: "http://localhost:8080/getRandomPlayer",
-        url: "getRandomPlayer",
+        // url: "getRandomPlayer",
         params: { basePrice: this.basePrice, category: this.category },
         headers: {
-          // "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
         },
       };
