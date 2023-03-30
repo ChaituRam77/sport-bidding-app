@@ -1,8 +1,8 @@
 <template>
-  <h1 class='fs-3 app-title'><strong>IPL 2022 Points Table</strong></h1>
+  <h1 class='fs-3 app-title'><strong>IPL 2023 Auction</strong></h1>
   <nav>
-    <router-link to="/">Standings</router-link> &nbsp;&nbsp;
-    <router-link to="/auctionPlayer">Playerwise Scores</router-link> &nbsp;&nbsp;&nbsp;
+    <router-link to="/">Teams</router-link> &nbsp;&nbsp;
+    <router-link to="/auctionPlayer">Auction Area</router-link> &nbsp;&nbsp;&nbsp;
     <router-link to="/auctionBay"><i class="bi bi-three-dots-vertical"></i></router-link>
   </nav>
   <router-view/>
